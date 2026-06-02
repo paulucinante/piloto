@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Participa en nuestra prueba piloto gratuita de 30 días de apoyo laboral para personas con TEA y/o discapacidad intelectual. Te apoyamos en tu día a día laboral de forma sencilla por WhatsApp.">
+  <title>Apoyo Laboral - Programa Piloto de Acompañamiento en el Trabajo</title>
+  
+  <!-- Tipografías Oficiales Digit-able: Hanken Grotesk y Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Enlace de salto rápido para accesibilidad por teclado -->
+  <a href="#formulario-inscripcion" class="skip-link">Saltar directamente al formulario de inscripción</a>
+
+  <!-- ENCABEZADO -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-area" aria-label="Logo de la Iniciativa de Apoyo Laboral">
+        <!-- Icono de manos unidas / apoyo -->
+        <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#16687A"/>
+          <path d="M12 18.5l-1.1-.98C6.5 13.5 4 10.9 4 8c0-2 1.5-3.5 3.5-3.5 1.5 0 2.9.9 3.5 2.2h2c.6-1.3 2-2.2 3.5-2.2 2 0 3.5 1.5 3.5 3.5 0 2.9-2.5 5.5-6.9 9.52L12 18.5z" fill="#FBFBF9"/>
+        </svg>
+        <span class="logo-text">Apoyo Laboral</span>
+      </div>
+      <nav class="main-nav" aria-label="Menú principal">
+        <a href="#formulario-inscripcion" class="nav-cta-btn">Quiero participar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-content">
+
+    <!-- SECCIÓN 1: HERO -->
+    <section class="section-hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <h1 id="hero-title" class="hero-title">
+            ¿Trabajas y a veces necesitas ayuda para resolver problemas en el trabajo?
+          </h1>
+          <p class="hero-subtitle">
+            Estamos probando un nuevo servicio de apoyo para personas con TEA o discapacidad intelectual. Queremos ayudarte cuando surjan dudas, dificultades o situaciones complicadas en tu día a día laboral.
+          </p>
+          <div class="hero-actions">
+            <div class="hero-cta-wrapper">
+              <a href="#formulario-inscripcion" class="btn btn-primary" id="hero-cta">Quiero participar</a>
+              <p class="hero-cta-hint"><strong>¡Inscríbete ya!</strong> El piloto empieza el 15 de junio</p>
+            </div>
+            <div class="hero-badges" aria-label="Detalles del programa">
+              <span class="badge badge-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" fill="currentColor"/></svg>
+                Participación gratuita
+              </span>
+              <span class="badge badge-accent">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
+                Plazas limitadas
+              </span>
+              <span class="badge badge-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" fill="currentColor"/></svg>
+                Prueba piloto de 30 días
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-content" aria-hidden="true">
+          <!-- Ilustración de Apoyo Laboral en SVG -->
+          <svg class="hero-illustration" width="100%" height="auto" viewBox="0 0 450 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fondo suave circular -->
+            <circle cx="225" cy="175" r="150" fill="#EBF2F4" />
+            
+            <!-- Mesa de oficina -->
+            <rect x="80" y="270" width="290" height="12" rx="6" fill="#1B2A32" />
+            <rect x="120" y="282" width="20" height="40" fill="#1B2A32" />
+            <rect x="310" y="282" width="20" height="40" fill="#1B2A32" />
+
+            <!-- Ordenador Portátil -->
+            <rect x="130" y="220" width="80" height="50" rx="4" fill="#6B808C" />
+            <rect x="140" y="228" width="60" height="34" fill="#FBFBF9" />
+            <path d="M115 270h110l-10-10h-90l-10 10z" fill="#4B5E6B" />
+
+            <!-- Flexo/Lámpara de mesa -->
+            <path d="M290 270l-20-40 10-5" stroke="#16687A" stroke-width="4" stroke-linecap="round" />
+            <path d="M270 225l10-30 8-2" stroke="#16687A" stroke-width="4" stroke-linecap="round" />
+            <path d="M260 195a15 15 0 0130 0h-30z" fill="#D46A43" />
+            <polygon points="260,195 240,240 310,240 290,195" fill="#FFE082" opacity="0.3" />
+
+            <!-- Personaje 1 (Trabajador con TEA / Discapacidad Intelectual) -->
+            <!-- Silla de oficina -->
+            <rect x="145" y="240" width="50" height="8" fill="#D46A43" />
+            <path d="M170 248v35" stroke="#1B2A32" stroke-width="8" />
+            <path d="M150 283h40" stroke="#1B2A32" stroke-width="8" stroke-linecap="round" />
+            
+            <!-- Cuerpo y cabeza P1 -->
+            <path d="M140 230c0-20 10-35 30-35s30 15 30 35v15h-60v-15z" fill="#16687A" />
+            <circle cx="170" cy="165" r="22" fill="#F8C09E" />
+            <!-- Cabello P1 -->
+            <path d="M148 165c0-15 10-25 22-25s22 10 22 25c0 3-2 6-5 6h-34c-3 0-5-3-5-6z" fill="#5D4037" />
+            <rect x="160" y="180" width="20" height="10" fill="#F8C09E" />
+            <!-- Expresión alegre y gafas legibles -->
+            <circle cx="163" cy="165" r="4" fill="#1B2A32" />
+            <circle cx="177" cy="165" r="4" fill="#1B2A32" />
+            <path d="M166 173q4 3 8 0" stroke="#1B2A32" stroke-width="2" stroke-linecap="round" fill="none" />
+
+            <!-- Personaje 2 (Acompañante de apoyo / Mentor) -->
+            <!-- Cuerpo y cabeza P2 -->
+            <path d="M260 210c0-25 15-40 35-40s35 15 35 40v30h-70v-30z" fill="#D46A43" />
+            <circle cx="295" cy="140" r="22" fill="#FFCC80" />
+            <!-- Cabello P2 -->
+            <path d="M273 140c0-18 10-28 22-28s22 10 22 28c0 4-3 7-6 7h-32c-3 0-6-3-6-7z" fill="#F57C00" />
+            <!-- Expresión amable -->
+            <circle cx="288" cy="140" r="4" fill="#1B2A32" />
+            <circle cx="302" cy="140" r="4" fill="#1B2A32" />
+            <path d="M291 149q4 4 8 0" stroke="#1B2A32" stroke-width="2" stroke-linecap="round" fill="none" />
+
+            <!-- Brazo de apoyo de P2 (extendido de forma amable hacia P1) -->
+            <path d="M265 200c-15-5-25-15-35-10s-10 15 0 20c10 5 25-5 35-10z" fill="#D46A43" />
+            <circle cx="225" cy="192" r="8" fill="#FFCC80" />
+
+            <!-- Bocadillo de diálogo de apoyo / Comunicación fácil -->
+            <path d="M210 95h70a15 15 0 0115 15v20a15 15 0 01-15 15h-45l-15 15v-15a15 15 0 01-10-15v-20a15 15 0 0115-15z" fill="#FBFBF9" stroke="#16687A" stroke-width="3" />
+            <line x1="225" y1="115" x2="265" y2="115" stroke="#16687A" stroke-width="3" stroke-linecap="round" />
+            <line x1="225" y1="125" x2="255" y2="125" stroke="#16687A" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: SITUACIONES REALES -->
+    <section class="section-situations" id="situaciones" aria-labelledby="situations-title">
+      <div class="container">
+        <h2 id="situations-title" class="section-title text-center">¿Te ha pasado alguna vez?</h2>
+        
+        <div class="situations-grid">
+          <!-- Tarjeta 1 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <path d="M9.5 9c0-1.6 1.3-3 2.5-3s2.5 1.4 2.5 3c0 1.5-1 2.3-2 3-.7.5-1 1-1 1.8v.7M12 18h.01" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">No entiendo bien una tarea.</p>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <circle cx="12" cy="12" r="7" stroke="#16687A" stroke-width="2"/>
+                <path d="M12 8v4l2.5 1.5" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">Tengo demasiadas cosas que hacer.</p>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <path d="M12 11a3 3 0 100-6 3 3 0 000 6zM6 18c0-2.5 2.7-4 6-4s6 1.5 6 4" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">Me da vergüenza pedir ayuda.</p>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <circle cx="9" cy="9.5" r="2" stroke="#16687A" stroke-width="2"/>
+                <path d="M5 16.5c0-1.5 1.5-2.5 4-2.5s3 1 3.5 2" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="15" cy="9.5" r="2" stroke="#16687A" stroke-width="2"/>
+                <path d="M12.5 16c.5-1 1-2 3.5-2s4 1 4 2.5" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">He tenido un problema con un compañero.</p>
+          </div>
+
+          <!-- Tarjeta 5 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <path d="M7.5 14.5a2.5 2.5 0 010-5 3 3 0 015.5-1.5 2.5 2.5 0 014 2.5 2.5 2.5 0 01-1 4H7.5z" stroke="#16687A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">Me siento nervioso o bloqueado.</p>
+          </div>
+
+          <!-- Tarjeta 6 -->
+          <div class="situation-card">
+            <div class="card-icon-wrapper" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4"/>
+                <path d="M9 6H6v12h3M17 12H9.5m4.5-3.5L17.5 12l-3.5 3.5" stroke="#16687A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="situation-text">Estoy pensando en dejar el trabajo.</p>
+          </div>
+        </div>
+
+        <p class="situations-footer-text">
+          No siempre es fácil recibir ayuda justo cuando la necesitas.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: CÓMO FUNCIONA -->
+    <section class="section-steps" id="como-funciona" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title" class="section-title text-center">¿Cómo funciona?</h2>
+        
+        <div class="steps-flow">
+          <!-- Paso 1 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="4" width="18" height="16" rx="2" fill="#EBF2F4" stroke="#16687A" stroke-width="2"/>
+                <path d="M7 8h10M7 12h10M7 16h6" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Te surge una dificultad</h3>
+            <p>Cuando tengas una duda o un problema en tu trabajo diario.</p>
+          </div>
+
+          <!-- Divisor visual (Flecha) en pantallas grandes -->
+          <div class="step-divider" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14m-4-4l4 4-4 4" stroke="#D46A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-icon" aria-hidden="true">
+              <!-- Icono de WhatsApp con verde contrastado y accesible -->
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF7ED"/>
+                <path d="M12 5.5a6.5 6.5 0 00-5.6 9.8l-.9 2.7 2.8-.9a6.5 6.5 0 103.7-11.6z" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.5 9.5c.2-.2.5-.2.7 0l.9.9c.2.2.2.5 0 .7l-.3.3c-.1.1-.1.2 0 .3.3.6.8 1.1 1.4 1.4.1.1.2 0 .3 0l.3-.3c.2-.2.5-.2.7 0l.9.9c.2.2.2.5 0 .7l-.6.6c-.4.4-.9.4-1.3.2-1.6-.7-2.9-2-3.6-3.6-.2-.4-.2-.9.2-1.3l.5-.5z" fill="#2E7D32"/>
+              </svg>
+            </div>
+            <h3>Nos escribes por WhatsApp</h3>
+            <p>Nos mandas un mensaje contándonos lo que te pasa. Fácil y rápido.</p>
+          </div>
+
+          <!-- Divisor visual (Flecha) en pantallas grandes -->
+          <div class="step-divider" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14m-4-4l4 4-4 4" stroke="#D46A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#EBF2F4" stroke="#16687A" stroke-width="2"/>
+                <path d="M8 12.5l3 3 5-6" stroke="#16687A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Recibes orientación y apoyo</h3>
+            <p>Te respondemos dándote consejos prácticos para resolver tu problema.</p>
+          </div>
+        </div>
+
+        <p class="steps-footer-text">
+          Queremos aprender qué apoyos son realmente útiles para las personas en su día a día laboral.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: QUIÉN PUEDE PARTICIPAR -->
+    <section class="section-requirements" id="participar" aria-labelledby="requirements-title">
+      <div class="container requirements-wrapper">
+        <h2 id="requirements-title" class="section-title">¿Quién puede participar?</h2>
+        
+        <ul class="requirements-list" role="list">
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Personas con <strong>TEA</strong> (Trastorno del Espectro del Autismo).</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Personas con <strong>discapacidad intelectual</strong>.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Que actualmente estén <strong>trabajando</strong>.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Mayores de <strong>18 años</strong>.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Con acceso a la aplicación **WhatsApp** en el móvil.</span>
+          </li>
+        </ul>
+
+        <div class="requirements-duration-banner">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="#EBF2F4" stroke="#16687A" stroke-width="2"/>
+            <path d="M12 6v6l4 2" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span>El piloto dura <strong>30 días</strong> y empieza el <strong>15 de junio</strong>. ¡Apúntate ya para asegurar tu plaza!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: FORMULARIO -->
+    <section class="section-form" id="formulario-inscripcion" aria-labelledby="form-title">
+      <div class="container form-max-width">
+        
+        <!-- Tarjeta del Formulario -->
+        <div class="form-card">
+          <h2 id="form-title" class="form-card-title text-center">Déjanos tus datos</h2>
+          <p class="form-card-subtitle text-center">
+            El programa piloto empieza el <strong>15 de junio</strong>. Rellena este formulario hoy mismo para asegurar tu plaza.
+          </p>
+
+          <!-- Mensaje de error general (oculto por defecto) -->
+          <div id="form-error-summary" class="error-summary-box" role="alert" aria-live="assertive" style="display: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#FADBD8" stroke="#C0392B" stroke-width="2"/>
+              <path d="M12 8v5M12 16h.01" stroke="#C0392B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Por favor, revisa los campos señalados en rojo para continuar.</span>
+          </div>
+
+          <form id="pilot-signup-form" novalidate>
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="nombre">Nombre <span class="required-indicator" aria-hidden="true">*</span></label>
+              <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="given-name">
+              <span class="field-error" id="error-nombre" role="alert"></span>
+            </div>
+
+            <!-- Apellidos -->
+            <div class="form-group">
+              <label for="apellidos">Apellidos <span class="required-indicator" aria-hidden="true">*</span></label>
+              <input type="text" id="apellidos" name="apellidos" required aria-required="true" autocomplete="family-name">
+              <span class="field-error" id="error-apellidos" role="alert"></span>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+              <label for="email">Correo electrónico <span class="required-indicator" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+              <span class="field-error" id="error-email" role="alert"></span>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+              <label for="telefono">Teléfono móvil <span class="required-indicator" aria-hidden="true">*</span></label>
+              <input type="tel" id="telefono" name="telefono" required aria-required="true" autocomplete="tel">
+              <span class="field-error" id="error-telefono" role="alert"></span>
+            </div>
+
+            <!-- Edad y Provincia en paralelo en pantallas grandes -->
+            <div class="form-row-2">
+              <!-- Edad -->
+              <div class="form-group">
+                <label for="edad">Edad <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="number" id="edad" name="edad" min="18" max="120" required aria-required="true">
+                <span class="field-error" id="error-edad" role="alert"></span>
+              </div>
+
+              <!-- Provincia -->
+              <div class="form-group">
+                <label for="provincia">Provincia de residencia <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="text" id="provincia" name="provincia" required aria-required="true" autocomplete="address-level2">
+                <span class="field-error" id="error-provincia" role="alert"></span>
+              </div>
+            </div>
+
+            <!-- ¿Trabajas actualmente? (Radio buttons grandes) -->
+            <fieldset class="form-group form-fieldset">
+              <legend>¿Trabajas actualmente? <span class="required-indicator" aria-hidden="true">*</span></legend>
+              <div class="radio-options">
+                <label class="radio-label">
+                  <input type="radio" name="trabaja" value="si" required>
+                  <span class="custom-radio"></span>
+                  <span>Sí, tengo un trabajo</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="trabaja" value="no">
+                  <span class="custom-radio"></span>
+                  <span>No trabajo en este momento</span>
+                </label>
+              </div>
+              <span class="field-error" id="error-trabaja" role="alert"></span>
+            </fieldset>
+
+            <!-- ¿Tienes TEA o Discapacidad Intelectual? -->
+            <fieldset class="form-group form-fieldset">
+              <legend>¿Tienes TEA, discapacidad intelectual o ambas? <span class="required-indicator" aria-hidden="true">*</span></legend>
+              <div class="radio-options-vertical">
+                <label class="radio-label">
+                  <input type="radio" name="diagnostico" value="tea" required>
+                  <span class="custom-radio"></span>
+                  <span>Tengo TEA (Autismo)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="diagnostico" value="di">
+                  <span class="custom-radio"></span>
+                  <span>Tengo discapacidad intelectual</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="diagnostico" value="ambas">
+                  <span class="custom-radio"></span>
+                  <span>Tengo ambas</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="diagnostico" value="no-decir">
+                  <span class="custom-radio"></span>
+                  <span>Prefiero no decirlo</span>
+                </label>
+              </div>
+              <span class="field-error" id="error-diagnostico" role="alert"></span>
+            </fieldset>
+
+            <!-- Pregunta abierta -->
+            <div class="form-group">
+              <label for="dificultades">¿Qué te gustaría mejorar o qué dificultades encuentras en tu trabajo? (Opcional)</label>
+              <textarea id="dificultades" name="dificultades" rows="4" placeholder="Ejemplo: Entender las instrucciones de mi jefe o hablar con mis compañeros..."></textarea>
+            </div>
+
+            <!-- Privacidad y condiciones (Checkbox obligatorio) -->
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label" for="privacidad-ok">
+                <input type="checkbox" id="privacidad-ok" name="privacidad" required aria-required="true">
+                <span class="custom-checkbox"></span>
+                <span class="checkbox-text">
+                  He leído la información y acepto que me contacten para informarme sobre el programa piloto. <span class="required-indicator" aria-hidden="true">*</span>
+                </span>
+              </label>
+              <span class="field-error" id="error-privacidad" role="alert"></span>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
+              <span class="btn-text">Quiero recibir información</span>
+              <span class="btn-spinner" style="display: none;" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <!-- Pantalla de Éxito (Oculta por defecto) -->
+          <div id="form-success-state" class="form-success-box" role="dialog" aria-labelledby="success-title" aria-describedby="success-desc" style="display: none;">
+            <div class="success-icon-wrapper">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#E8F8F5" stroke="#2ECC71" stroke-width="2"/>
+                <path d="M8.5 12.5l2.5 2.5 5-5" stroke="#2ECC71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 id="success-title">¡Muchas gracias por tu interés!</h3>
+            <p id="success-desc">
+              Hemos recibido tus datos correctamente. En los próximos días nos pondremos en contacto contigo por teléfono o por WhatsApp para explicarte los siguientes pasos de la prueba piloto.
+            </p>
+            <button type="button" class="btn btn-secondary" id="btn-success-reset">Volver a ver la página</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: MENSAJE FINAL -->
+    <section class="section-final" id="final-message" aria-labelledby="final-title">
+      <div class="container text-center">
+        <h2 id="final-title" class="final-title">Queremos construir mejores apoyos para el empleo.</h2>
+        <p class="final-text">
+          Tu experiencia puede ayudarnos a entender mejor las dificultades que aparecen en el trabajo y a crear apoyos más útiles para otras personas.
+        </p>
+        <a href="#formulario-inscripcion" class="btn btn-primary" id="final-cta">Participar en el piloto</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <p class="footer-copy">&copy; 2026 Iniciativa de Apoyo Laboral. Todos los derechos reservados.</p>
+      <nav class="footer-nav" aria-label="Enlaces legales y de contacto">
+        <button type="button" class="footer-link-btn" id="btn-privacy">Política de privacidad</button>
+        <button type="button" class="footer-link-btn" id="btn-legal">Aviso legal</button>
+        <button type="button" class="footer-link-btn" id="btn-contact">Contacto</button>
+        <button type="button" class="footer-link-btn" id="btn-admin" style="font-weight: bold; text-decoration: underline;">Acceso Organización</button>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- MODALES LEGALES Y DE CONTACTO (Accesibilidad mediante <dialog> nativo) -->
+
+  <!-- Modal Política de Privacidad -->
+  <dialog id="modal-privacy" class="legal-modal" aria-labelledby="modal-privacy-title">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-privacy-title">Política de Privacidad</h2>
+        <button type="button" class="modal-close-btn" aria-label="Cerrar política de privacidad">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <p><strong>¿Quién cuida tus datos?</strong></p>
+        <p>Los datos que nos envíes en el formulario se guardan de forma segura para gestionar tu participación en este programa piloto de apoyo al empleo.</p>
+        <p><strong>¿Para qué usaremos tus datos?</strong></p>
+        <ul>
+          <li>Para ponernos en contacto contigo por teléfono o WhatsApp si cumples los requisitos.</li>
+          <li>Para explicarte cómo funciona la prueba piloto de 30 días.</li>
+        </ul>
+        <p><strong>¿Compartiremos tus datos?</strong></p>
+        <p>No. No venderemos ni daremos tus datos personales a ninguna otra empresa u organización. Tus datos se guardarán de forma estrictamente privada y confidencial.</p>
+        <p><strong>Tus derechos</strong></p>
+        <p>Puedes escribirnos en cualquier momento para pedir que borremos tus datos o para ver qué información tenemos tuya. Para hacerlo, mándanos un correo a: <strong>privacidad@apoyolaboral-piloto.org</strong></p>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-action">Cerrar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Modal Aviso Legal -->
+  <dialog id="modal-legal" class="legal-modal" aria-labelledby="modal-legal-title">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-legal-title">Aviso Legal</h2>
+        <button type="button" class="modal-close-btn" aria-label="Cerrar aviso legal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <p>Este sitio web es parte de una iniciativa de investigación independiente y sin ánimo de lucro dedicada a mejorar el empleo y los apoyos a la diversidad en el trabajo.</p>
+        <p><strong>Propósito de la web</strong></p>
+        <p>El único objetivo de esta página es informar sobre la prueba piloto de un servicio gratuito de orientación laboral a través de WhatsApp y recoger solicitudes de participación.</p>
+        <p><strong>Condiciones de la prueba piloto</strong></p>
+        <p>La participación es totalmente gratuita y voluntaria. Los participantes pueden abandonar el piloto en cualquier momento que lo deseen simplemente informando al equipo de apoyo.</p>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-action">Cerrar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Modal Contacto -->
+  <dialog id="modal-contact" class="legal-modal" aria-labelledby="modal-contact-title">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-contact-title">Contacto</h2>
+        <button type="button" class="modal-close-btn" aria-label="Cerrar contacto">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body text-center">
+        <p>¿Tienes dudas sobre el programa piloto o necesitas ayuda para rellenar el formulario?</p>
+        <p>Puedes escribirnos o llamarnos. Estaremos encantados de ayudarte:</p>
+        
+        <div class="contact-methods">
+          <div class="contact-item">
+            <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16687A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <p><strong>Correo electrónico:</strong><br><a href="mailto:hola@apoyolaboral-piloto.org">hola@apoyolaboral-piloto.org</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <p><strong>Llamadas o WhatsApp:</strong><br><a href="tel:+34900000000">+34 900 000 000</a></p>
+          </div>
+        </div>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-action">Cerrar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Modal de Acceso / Login de la Organización -->
+  <dialog id="modal-login" class="legal-modal login-modal" aria-labelledby="modal-login-title">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-login-title">Acceso Restringido</h2>
+        <button type="button" class="modal-close-btn" aria-label="Cerrar acceso">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body" style="padding: var(--spacing-lg) var(--spacing-md);">
+        <p class="admin-info-text" style="margin-bottom: var(--spacing-md);">Introduce la contraseña de la organización para acceder al panel de registros:</p>
+        <form id="admin-login-form" novalidate>
+          <div class="form-group" style="margin-bottom: var(--spacing-sm);">
+            <label for="login-password">Contraseña de acceso <span class="required-indicator" aria-hidden="true">*</span></label>
+            <input type="password" id="login-password" required aria-required="true" style="min-height: 44px; padding: 8px 12px; border: 2px solid var(--color-border); border-radius: var(--border-radius-sm); font-size: 1rem; width: 100%;">
+            <span class="field-error" id="error-login-password" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="min-height: 44px; margin-top: var(--spacing-sm);">Entrar al Panel</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal Acceso Organización / Panel de Control -->
+  <dialog id="modal-admin" class="legal-modal admin-modal" aria-labelledby="modal-admin-title">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-admin-title">Panel de Control - Registros</h2>
+        <button type="button" class="modal-close-btn" aria-label="Cerrar panel de control">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <div class="admin-actions-bar">
+          <p class="admin-info-text">Aquí puedes ver los participantes inscritos en tiempo real y descargar la base de datos completa para abrirla en Excel.</p>
+          <button type="button" id="btn-download-csv" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; margin-bottom: -3px;" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/></svg>
+            Descargar Excel (CSV)
+          </button>
+        </div>
+
+        <!-- Caja de Conexión Google Sheets -->
+        <div class="admin-google-sheet-box">
+          <h3 style="font-size: 1.2rem; color: var(--color-brand-primary); margin-bottom: var(--spacing-xs);">Conexión automática con Google Sheets</h3>
+          <p class="admin-info-text" style="font-size: 0.95rem; margin-bottom: var(--spacing-sm);">
+            Si quieres guardar las inscripciones automáticamente en una hoja de Google Sheets en tu cuenta de Google, introduce aquí la URL de tu Google Apps Script (los detalles del código y configuración están detallados en la documentación):
+          </p>
+          <div class="url-input-group" style="display: flex; gap: var(--spacing-sm); align-items: center; flex-wrap: wrap;">
+            <input type="text" id="input-webapp-url" placeholder="https://script.google.com/macros/s/.../exec" style="flex: 1; min-height: 44px; padding: 8px 12px; border: 2px solid var(--color-border); border-radius: var(--border-radius-sm); font-size: 0.95rem;">
+            <button type="button" id="btn-save-webapp-url" class="btn btn-primary" style="padding: 8px 16px; min-height: 44px; font-size: 0.95rem;">Guardar Enlace</button>
+          </div>
+          <span id="webapp-url-status" style="display: block; font-size: 0.9rem; margin-top: 5px; font-weight: bold; color: var(--color-success);"></span>
+        </div>
+        
+        <div class="table-scroll-wrapper">
+          <table class="admin-table" id="table-registros">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Fecha de Registro</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo Electrónico</th>
+                <th>Teléfono</th>
+                <th>Edad</th>
+                <th>Provincia</th>
+                <th>¿Trabaja actualmente?</th>
+                <th>Diagnóstico</th>
+                <th>Dificultades en el trabajo</th>
+              </tr>
+            </thead>
+            <tbody id="admin-table-body">
+              <!-- Cargado dinámicamente desde JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="modal-footer" style="justify-content: space-between;">
+        <button type="button" class="btn btn-secondary" id="btn-clear-data" style="color: var(--color-error); border-color: var(--color-error);">Borrar registros nuevos</button>
+        <button type="button" class="btn btn-secondary modal-close-action">Cerrar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
