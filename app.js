@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. BASE DE DATOS LOCAL Y MOCK RECORDS
   // ==========================================
   const mockRegistrations = [
-    { id: 1, fecha: '02/06/2026 10:15', nombre: 'Carlos', apellidos: 'Martín Gómez', email: 'carlos.martin@email.com', telefono: '612345678', edad: 24, provincia: 'Madrid', trabaja: 'Sí', diagnostico: 'TEA', dificultades: 'Me cuesta entender las bromas de mis compañeros y organizar tareas largas.' },
-    { id: 2, fecha: '02/06/2026 11:30', nombre: 'Sofía', apellidos: 'Ruiz Plaza', email: 'sofia.ruiz@email.com', telefono: '654321098', edad: 29, provincia: 'Barcelona', trabaja: 'Sí', diagnostico: 'Discapacidad intelectual', dificultades: 'Me pongo muy nerviosa cuando hay mucho ruido y a veces me bloqueo.' },
-    { id: 3, fecha: '02/06/2026 12:45', nombre: 'Miguel Ángel', apellidos: 'Sanz López', email: 'miguel.sanz@email.com', telefono: '678901234', edad: 35, provincia: 'Valencia', trabaja: 'Sí', diagnostico: 'Ambas', dificultades: 'A veces me cuesta seguir el ritmo cuando me dan muchas tareas juntas.' },
-    { id: 4, fecha: '02/06/2026 14:10', nombre: 'Lucía', apellidos: 'Fernández Ocaña', email: 'lucia.fernandez@email.com', telefono: '690123456', edad: 22, provincia: 'Sevilla', trabaja: 'Sí', diagnostico: 'TEA', dificultades: 'Me da vergüenza pedir ayuda cuando no entiendo una instrucción de mi encargado.' }
+    { id: 1, fecha: '02/06/2026 10:15', nombre_apellidos: 'Carlos Martín Gómez', entidad: 'Fundación Inclusión', cargo: 'Preparador Laboral', email: 'carlos.martin@fundacioninclusion.org', telefono: '612345678', provincia: 'Madrid', acompanadas: 12, entrevista: 'Sí', comentarios: 'Interesado en una entrevista corta por la mañana.' },
+    { id: 2, fecha: '02/06/2026 11:30', nombre_apellidos: 'Sofía Ruiz Plaza', entidad: 'Asociación Aspadir', cargo: 'Técnica de Empleo', email: 'sofia.ruiz@aspadir.es', telefono: '654321098', provincia: 'Barcelona', acompanadas: 8, entrevista: 'Quiero más información', comentarios: 'Nos gustaría conocer el tipo de preguntas antes de coordinar.' },
+    { id: 3, fecha: '02/06/2026 12:45', nombre_apellidos: 'Miguel Ángel Sanz López', entidad: 'Fundación ONCE', cargo: 'Coordinador de Empleo', email: 'miguel.sanz@fundaciononce.es', telefono: '678901234', provincia: 'Valencia', acompanadas: 25, entrevista: 'Sí', comentarios: 'Podemos colaborar facilitando opiniones de varios preparadores.' },
+    { id: 4, fecha: '02/06/2026 14:10', nombre_apellidos: 'Lucía Fernández Ocaña', entidad: 'Asociación Autismo Sevilla', cargo: 'Preparadora Laboral', email: 'lucia.fernandez@autismosevilla.org', telefono: '690123456', provincia: 'Sevilla', acompanadas: 10, entrevista: 'Sí', comentarios: 'Disponible para entrevista online en cualquier momento.' }
   ];
 
   // Obtiene los registros guardados o inicializa con los mock
@@ -42,13 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${dia}/${mes}/${anio} ${hora}:${min}`;
   }
 
-  // Mapea valor de radio de diagnóstico a texto entendible
-  function obtenerDiagnosticoTexto(valor) {
+  // Mapea valor de radio de entrevista a texto entendible
+  function obtenerEntrevistaTexto(valor) {
     switch(valor) {
-      case 'tea': return 'TEA';
-      case 'di': return 'Discapacidad intelectual';
-      case 'ambas': return 'Ambas';
-      case 'no-decir': return 'Prefiero no decirlo';
+      case 'si': return 'Sí';
+      case 'mas-info': return 'Quiero más información';
       default: return valor;
     }
   }
@@ -107,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           // Si el destino es el formulario, ponemos el foco en el primer campo
           if (targetId === '#formulario-inscripcion') {
-            const firstInput = document.getElementById('nombre');
+            const firstInput = document.getElementById('nombre_apellidos');
             if (firstInput) {
               firstInput.focus({ preventScroll: true });
             }
@@ -205,15 +203,15 @@ document.addEventListener('DOMContentLoaded', () => {
       tr.innerHTML = `
         <td style="font-weight: bold; color: var(--color-brand-primary);">${reg.id}</td>
         <td style="white-space: nowrap;">${reg.fecha}</td>
-        <td style="font-weight: 700;">${reg.nombre}</td>
-        <td>${reg.apellidos}</td>
+        <td style="font-weight: 700;">${reg.nombre_apellidos}</td>
+        <td>${reg.entidad}</td>
+        <td>${reg.cargo}</td>
         <td title="${reg.email}" style="color: var(--color-brand-primary);">${reg.email}</td>
         <td>${reg.telefono}</td>
-        <td>${reg.edad}</td>
         <td>${reg.provincia}</td>
-        <td>${reg.trabaja}</td>
-        <td>${reg.diagnostico}</td>
-        <td title="${reg.dificultades}">${reg.dificultades}</td>
+        <td>${reg.acompanadas}</td>
+        <td>${reg.entrevista}</td>
+        <td title="${reg.comentarios || ''}">${reg.comentarios || ''}</td>
       `;
       tableBody.appendChild(tr);
     });
@@ -228,25 +226,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const lista = obtenerRegistros();
       
       // Encabezados con punto y coma para compatibilidad automática con Excel
-      let csvContent = 'ID;Fecha de Registro;Nombre;Apellidos;Correo Electrónico;Teléfono;Edad;Provincia;¿Trabaja actualmente?;Diagnóstico;Dificultades en el trabajo;Acepta Privacidad;Estado de Contacto;Notas de Seguimiento\r\n';
+      let csvContent = 'ID;Fecha de Registro;Nombre y Apellidos;Entidad u Organización;Cargo o Función;Correo Electrónico;Teléfono;Provincia;Personas Acompañadas;¿Participar en entrevista?;Comentarios;Acepta Privacidad;Estado de Contacto;Notas de Seguimiento\r\n';
       
       lista.forEach(reg => {
-        const dificultadesLimpias = reg.dificultades
+        const comentariosLimpios = (reg.comentarios || '')
           .replace(/;/g, ',')
           .replace(/\r?\n|\r/g, ' ');
 
         const fila = [
           reg.id,
           reg.fecha,
-          reg.nombre.replace(/;/g, ','),
-          reg.apellidos.replace(/;/g, ','),
+          reg.nombre_apellidos.replace(/;/g, ','),
+          reg.entidad.replace(/;/g, ','),
+          reg.cargo.replace(/;/g, ','),
           reg.email.replace(/;/g, ','),
           reg.telefono.replace(/;/g, ','),
-          reg.edad,
           reg.provincia.replace(/;/g, ','),
-          reg.trabaja,
-          reg.diagnostico,
-          dificultadesLimpias,
+          reg.acompanadas,
+          reg.entrevista,
+          comentariosLimpios,
           'Sí',
           'Pendiente',
           ''
@@ -367,25 +365,34 @@ document.addEventListener('DOMContentLoaded', () => {
       let hasErrors = false;
       errorSummary.style.display = 'none';
 
-      // 1. Validar Nombre
-      const nombre = document.getElementById('nombre');
-      if (!nombre.value.trim()) {
-        showError(nombre, 'Escribe tu nombre.');
+      // 1. Validar Nombre y Apellidos
+      const nombreApellidos = document.getElementById('nombre_apellidos');
+      if (!nombreApellidos.value.trim()) {
+        showError(nombreApellidos, 'Escribe tu nombre y apellidos.');
         hasErrors = true;
       } else {
-        clearError(nombre);
+        clearError(nombreApellidos);
       }
 
-      // 2. Validar Apellidos
-      const apellidos = document.getElementById('apellidos');
-      if (!apellidos.value.trim()) {
-        showError(apellidos, 'Escribe tus apellidos.');
+      // 2. Validar Entidad
+      const entidad = document.getElementById('entidad');
+      if (!entidad.value.trim()) {
+        showError(entidad, 'Escribe tu entidad u organización.');
         hasErrors = true;
       } else {
-        clearError(apellidos);
+        clearError(entidad);
       }
 
-      // 3. Validar Correo
+      // 3. Validar Cargo
+      const cargo = document.getElementById('cargo');
+      if (!cargo.value.trim()) {
+        showError(cargo, 'Escribe tu cargo o función.');
+        hasErrors = true;
+      } else {
+        clearError(cargo);
+      }
+
+      // 4. Validar Correo
       const email = document.getElementById('email');
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email.value.trim()) {
@@ -398,11 +405,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clearError(email);
       }
 
-      // 4. Validar Teléfono
+      // 5. Validar Teléfono
       const telefono = document.getElementById('telefono');
       const telRegex = /^[0-9\s-+]{9,15}$/;
       if (!telefono.value.trim()) {
-        showError(telefono, 'Escribe tu número de teléfono móvil.');
+        showError(telefono, 'Escribe tu número de teléfono.');
         hasErrors = true;
       } else if (!telRegex.test(telefono.value.trim().replace(/\s/g, ''))) {
         showError(telefono, 'Escribe un teléfono válido de al menos 9 números.');
@@ -411,48 +418,38 @@ document.addEventListener('DOMContentLoaded', () => {
         clearError(telefono);
       }
 
-      // 5. Validar Edad
-      const edad = document.getElementById('edad');
-      if (!edad.value) {
-        showError(edad, 'Escribe tu edad.');
-        hasErrors = true;
-      } else {
-        const edadNum = parseInt(edad.value, 10);
-        if (isNaN(edadNum) || edadNum < 18 || edadNum > 120) {
-          showError(edad, 'Debes tener 18 años o más para participar.');
-          hasErrors = true;
-        } else {
-          clearError(edad);
-        }
-      }
-
       // 6. Validar Provincia
       const provincia = document.getElementById('provincia');
       if (!provincia.value.trim()) {
-        showError(provincia, 'Escribe tu provincia de residencia.');
+        showError(provincia, 'Escribe tu provincia.');
         hasErrors = true;
       } else {
         clearError(provincia);
       }
 
-      // 7. Validar ¿Trabajas actualmente?
-      const trabajaRadios = form.querySelectorAll('input[name="trabaja"]');
-      const trabajaSelected = Array.from(trabajaRadios).some(r => r.checked);
-      if (!trabajaSelected) {
-        showError(trabajaRadios[0], 'Selecciona una respuesta.');
+      // 7. Validar Acompañadas
+      const acompanadas = document.getElementById('acompanadas');
+      if (!acompanadas.value.trim()) {
+        showError(acompanadas, 'Escribe el número aproximado de personas a las que acompañas.');
         hasErrors = true;
       } else {
-        clearError(trabajaRadios[0]);
+        const acompNum = parseInt(acompanadas.value, 10);
+        if (isNaN(acompNum) || acompNum < 0) {
+          showError(acompanadas, 'Introduce un número válido mayor o igual a 0.');
+          hasErrors = true;
+        } else {
+          clearError(acompanadas);
+        }
       }
 
-      // 8. Validar TEA / Discapacidad Intelectual
-      const diagnosticoRadios = form.querySelectorAll('input[name="diagnostico"]');
-      const diagnosticoSelected = Array.from(diagnosticoRadios).some(r => r.checked);
-      if (!diagnosticoSelected) {
-        showError(diagnosticoRadios[0], 'Selecciona una de las opciones.');
+      // 8. Validar ¿Participar en entrevista?
+      const entrevistaRadios = form.querySelectorAll('input[name="entrevista"]');
+      const entrevistaSelected = Array.from(entrevistaRadios).some(r => r.checked);
+      if (!entrevistaSelected) {
+        showError(entrevistaRadios[0], 'Selecciona una respuesta.');
         hasErrors = true;
       } else {
-        clearError(diagnosticoRadios[0]);
+        clearError(entrevistaRadios[0]);
       }
 
       // 9. Validar Checkbox de Privacidad
@@ -479,15 +476,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const nuevoReg = {
         id: listaActual.length > 0 ? Math.max(...listaActual.map(r => r.id)) + 1 : 1,
         fecha: obtenerFechaActualString(),
-        nombre: nombre.value.trim(),
-        apellidos: apellidos.value.trim(),
+        nombre_apellidos: nombreApellidos.value.trim(),
+        entidad: entidad.value.trim(),
+        cargo: cargo.value.trim(),
         email: email.value.trim(),
         telefono: telefono.value.trim(),
-        edad: parseInt(edad.value, 10),
         provincia: provincia.value.trim(),
-        trabaja: form.querySelector('input[name="trabaja"]:checked').value === 'si' ? 'Sí' : 'No',
-        diagnostico: obtenerDiagnosticoTexto(form.querySelector('input[name="diagnostico"]:checked').value),
-        dificultades: document.getElementById('dificultades').value.trim() || 'Ninguna indicada.'
+        acompanadas: parseInt(acompanadas.value, 10),
+        entrevista: obtenerEntrevistaTexto(form.querySelector('input[name="entrevista"]:checked').value),
+        comentarios: document.getElementById('comentarios').value.trim() || 'Ninguno indicado.'
       };
 
       guardarRegistro(nuevoReg);
@@ -543,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
         successState.scrollIntoView({ behavior: 'smooth' });
       }
       submitButton.disabled = false;
-      if (btnText) btnText.textContent = 'Quiero recibir información';
+      if (btnText) btnText.textContent = 'Solicitar información';
       if (btnSpinner) btnSpinner.style.display = 'none';
     }
   }

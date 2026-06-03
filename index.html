@@ -30,7 +30,7 @@
         <span class="logo-text">Apoyo Laboral</span>
       </div>
       <nav class="main-nav" aria-label="Menú principal">
-        <a href="#formulario-inscripcion" class="nav-cta-btn">Quiero participar</a>
+        <a href="#formulario-inscripcion" class="nav-cta-btn">Quiero colaborar</a>
       </nav>
     </div>
   </header>
@@ -43,28 +43,31 @@
       <div class="container hero-grid">
         <div class="hero-text-content">
           <h1 id="hero-title" class="hero-title">
-            ¿Trabajas y a veces necesitas ayuda para resolver problemas en el trabajo?
+            ¿Qué ocurre cuando una persona necesita ayuda en el trabajo y su profesional de apoyo no está disponible?
           </h1>
           <p class="hero-subtitle">
-            Estamos probando un nuevo servicio de apoyo para personas con TEA o discapacidad intelectual. Queremos ayudarte cuando surjan dudas, dificultades o situaciones complicadas en tu día a día laboral.
+            Estamos desarrollando un estudio piloto para comprender mejor las dificultades cotidianas que afrontan las personas con discapacidad en el empleo y explorar nuevas formas de apoyo entre las intervenciones habituales.
           </p>
           <div class="hero-actions">
-            <div class="hero-cta-wrapper">
-              <a href="#formulario-inscripcion" class="btn btn-primary" id="hero-cta">Quiero participar</a>
-              <p class="hero-cta-hint"><strong>¡Inscríbete ya!</strong> El piloto empieza el 15 de junio</p>
+            <div class="hero-cta-wrapper" style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+              <a href="#formulario-inscripcion" class="btn btn-primary" id="hero-cta">Quiero colaborar</a>
+              <a href="#como-funciona" class="btn btn-secondary" id="hero-secondary-cta">Conocer el estudio</a>
             </div>
+            <p class="hero-cta-hint" style="color: var(--color-text-muted); font-weight: 500; font-size: 1.05rem; margin-top: var(--spacing-xs); margin-bottom: 0;">
+              Buscamos entidades y profesionales que trabajen en empleo con apoyo para colaborar en esta fase de investigación.
+            </p>
             <div class="hero-badges" aria-label="Detalles del programa">
               <span class="badge badge-primary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" fill="currentColor"/></svg>
-                Participación gratuita
+                Colaboración gratuita
               </span>
               <span class="badge badge-accent">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
-                Plazas limitadas
+                10-20 participantes
               </span>
               <span class="badge badge-secondary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" fill="currentColor"/></svg>
-                Prueba piloto de 30 días
+                Estudio piloto de 30 días
               </span>
             </div>
           </div>
@@ -132,10 +135,13 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 2: SITUACIONES REALES -->
+    <!-- SECCIÓN 2: PROBLEMA -->
     <section class="section-situations" id="situaciones" aria-labelledby="situations-title">
       <div class="container">
-        <h2 id="situations-title" class="section-title text-center">¿Te ha pasado alguna vez?</h2>
+        <h2 id="situations-title" class="section-title text-center">El reto no siempre aparece durante la sesión de apoyo.</h2>
+        <p class="section-description text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.2rem; color: var(--color-text-muted); font-family: var(--font-subtitle); line-height: 1.5;">
+          Los preparadores laborales y profesionales de apoyo realizan una labor esencial. Sin embargo, muchas dificultades surgen en momentos en los que la persona debe afrontarlas sola.
+        </p>
         
         <div class="situations-grid">
           <!-- Tarjeta 1 -->
@@ -146,7 +152,7 @@
                 <path d="M9.5 9c0-1.6 1.3-3 2.5-3s2.5 1.4 2.5 3c0 1.5-1 2.3-2 3-.7.5-1 1-1 1.8v.7M12 18h.01" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="situation-text">No entiendo bien una tarea.</p>
+            <p class="situation-text">No entender una tarea.</p>
           </div>
 
           <!-- Tarjeta 2 -->
@@ -158,7 +164,7 @@
                 <path d="M12 8v4l2.5 1.5" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="situation-text">Tengo demasiadas cosas que hacer.</p>
+            <p class="situation-text">No saber cómo organizarse.</p>
           </div>
 
           <!-- Tarjeta 3 -->
@@ -169,7 +175,7 @@
                 <path d="M12 11a3 3 0 100-6 3 3 0 000 6zM6 18c0-2.5 2.7-4 6-4s6 1.5 6 4" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="situation-text">Me da vergüenza pedir ayuda.</p>
+            <p class="situation-text">Tener miedo a pedir ayuda.</p>
           </div>
 
           <!-- Tarjeta 4 -->
@@ -183,7 +189,7 @@
                 <path d="M12.5 16c.5-1 1-2 3.5-2s4 1 4 2.5" stroke="#16687A" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="situation-text">He tenido un problema con un compañero.</p>
+            <p class="situation-text">Experimentar conflictos o malentendidos.</p>
           </div>
 
           <!-- Tarjeta 5 -->
@@ -194,7 +200,7 @@
                 <path d="M7.5 14.5a2.5 2.5 0 010-5 3 3 0 015.5-1.5 2.5 2.5 0 014 2.5 2.5 2.5 0 01-1 4H7.5z" stroke="#16687A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <p class="situation-text">Me siento nervioso o bloqueado.</p>
+            <p class="situation-text">Sentirse aislada.</p>
           </div>
 
           <!-- Tarjeta 6 -->
@@ -205,23 +211,26 @@
                 <path d="M9 6H6v12h3M17 12H9.5m4.5-3.5L17.5 12l-3.5 3.5" stroke="#16687A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <p class="situation-text">Estoy pensando en dejar el trabajo.</p>
+            <p class="situation-text">Pensar en abandonar el puesto.</p>
           </div>
         </div>
 
         <p class="situations-footer-text">
-          No siempre es fácil recibir ayuda justo cuando la necesitas.
+          Es clave identificar estas necesidades a tiempo para favorecer la permanencia en el puesto.
         </p>
       </div>
     </section>
 
-    <!-- SECCIÓN 3: CÓMO FUNCIONA -->
+    <!-- SECCIÓN 3: INVESTIGACIÓN -->
     <section class="section-steps" id="como-funciona" aria-labelledby="steps-title">
       <div class="container">
-        <h2 id="steps-title" class="section-title text-center">¿Cómo funciona?</h2>
+        <h2 id="steps-title" class="section-title text-center">¿Qué queremos comprender?</h2>
+        <p class="section-description text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.2rem; color: var(--color-text-muted); font-family: var(--font-subtitle); line-height: 1.5;">
+          Queremos conocer mejor qué dificultades aparecen en el día a día laboral, cuándo las personas buscan ayuda y qué apoyos resultan más útiles para favorecer la adaptación y la permanencia en el empleo.
+        </p>
         
         <div class="steps-flow">
-          <!-- Paso 1 -->
+          <!-- Tarjeta 1 -->
           <div class="step-card">
             <div class="step-number" aria-hidden="true">1</div>
             <div class="step-icon" aria-hidden="true">
@@ -230,8 +239,8 @@
                 <path d="M7 8h10M7 12h10M7 16h6" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Te surge una dificultad</h3>
-            <p>Cuando tengas una duda o un problema en tu trabajo diario.</p>
+            <h3>Apoyo en el momento oportuno</h3>
+            <p>Evaluar la eficacia del acompañamiento cuando el profesional de apoyo no está disponible de forma física.</p>
           </div>
 
           <!-- Divisor visual (Flecha) en pantallas grandes -->
@@ -241,7 +250,7 @@
             </svg>
           </div>
 
-          <!-- Paso 2 -->
+          <!-- Tarjeta 2 -->
           <div class="step-card">
             <div class="step-number" aria-hidden="true">2</div>
             <div class="step-icon" aria-hidden="true">
@@ -252,8 +261,8 @@
                 <path d="M9.5 9.5c.2-.2.5-.2.7 0l.9.9c.2.2.2.5 0 .7l-.3.3c-.1.1-.1.2 0 .3.3.6.8 1.1 1.4 1.4.1.1.2 0 .3 0l.3-.3c.2-.2.5-.2.7 0l.9.9c.2.2.2.5 0 .7l-.6.6c-.4.4-.9.4-1.3.2-1.6-.7-2.9-2-3.6-3.6-.2-.4-.2-.9.2-1.3l.5-.5z" fill="#2E7D32"/>
               </svg>
             </div>
-            <h3>Nos escribes por WhatsApp</h3>
-            <p>Nos mandas un mensaje contándonos lo que te pasa. Fácil y rápido.</p>
+            <h3>Autonomía en el trabajo</h3>
+            <p>Promover la capacidad de resolución independiente mediante guías de comunicación y pautas sencillas y accesibles.</p>
           </div>
 
           <!-- Divisor visual (Flecha) en pantallas grandes -->
@@ -263,7 +272,7 @@
             </svg>
           </div>
 
-          <!-- Paso 3 -->
+          <!-- Tarjeta 3 -->
           <div class="step-card">
             <div class="step-number" aria-hidden="true">3</div>
             <div class="step-icon" aria-hidden="true">
@@ -272,66 +281,128 @@
                 <path d="M8 12.5l3 3 5-6" stroke="#16687A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3>Recibes orientación y apoyo</h3>
-            <p>Te respondemos dándote consejos prácticos para resolver tu problema.</p>
+            <h3>Detección temprana de necesidades</h3>
+            <p>Analizar qué tipo de incidencias son más recurrentes y qué herramientas ayudan a prevenir abandonos laborales.</p>
           </div>
         </div>
 
         <p class="steps-footer-text">
-          Queremos aprender qué apoyos son realmente útiles para las personas en su día a día laboral.
+          El objetivo es recopilar datos de utilidad para complementar el trabajo de los preparadores laborales y entidades de empleo con apoyo.
         </p>
       </div>
     </section>
 
-    <!-- SECCIÓN 4: QUIÉN PUEDE PARTICIPAR -->
+    <!-- SECCIÓN 4: PILOTO -->
     <section class="section-requirements" id="participar" aria-labelledby="requirements-title">
       <div class="container requirements-wrapper">
-        <h2 id="requirements-title" class="section-title">¿Quién puede participar?</h2>
+        <h2 id="requirements-title" class="section-title">Programa piloto</h2>
         
         <ul class="requirements-list" role="list">
           <li>
             <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Personas con <strong>TEA</strong> (Trastorno del Espectro del Autismo).</span>
+            <span><strong>Duración:</strong> 30 días.</span>
           </li>
           <li>
             <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Personas con <strong>discapacidad intelectual</strong>.</span>
+            <span><strong>Participantes:</strong> Entre 10 y 20 personas con discapacidad en activo.</span>
           </li>
           <li>
             <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Que actualmente estén <strong>trabajando</strong>.</span>
-          </li>
-          <li>
-            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Mayores de <strong>18 años</strong>.</span>
-          </li>
-          <li>
-            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Con acceso a la aplicación **WhatsApp** en el móvil.</span>
+            <span><strong>Canal de comunicación:</strong> WhatsApp.</span>
           </li>
         </ul>
 
-        <div class="requirements-duration-banner">
+        <div class="requirements-duration-banner" style="margin-bottom: var(--spacing-lg);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="#EBF2F4" stroke="#16687A" stroke-width="2"/>
             <path d="M12 6v6l4 2" stroke="#16687A" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
-          <span>El piloto dura <strong>30 días</strong> y empieza el <strong>15 de junio</strong>. ¡Apúntate ya para asegurar tu plaza!</span>
+          <span>Los participantes podrán solicitar orientación cuando surjan dificultades relacionadas con su trabajo.</span>
+        </div>
+
+        <div class="collaboration-block" style="background-color: var(--color-bg-primary); border: 2px solid var(--color-border); border-radius: var(--border-radius-md); padding: var(--spacing-md); margin-top: var(--spacing-md); text-align: left;">
+          <h3 style="font-family: var(--font-subtitle); color: var(--color-brand-primary); margin-bottom: var(--spacing-sm); font-size: 1.35rem; font-weight: 700;">¿Cómo pueden colaborar las entidades?</h3>
+          <ul class="requirements-list" role="list" style="margin-bottom: 0;">
+            <li style="font-size: 1.1rem; margin-bottom: var(--spacing-xs);">
+              <svg class="list-check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Participando en entrevistas profesionales sobre su experiencia cotidiana.</span>
+            </li>
+            <li style="font-size: 1.1rem; margin-bottom: var(--spacing-xs);">
+              <svg class="list-check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Compartiendo sus necesidades cotidianas de apoyo laboral.</span>
+            </li>
+            <li style="font-size: 1.1rem; margin-bottom: var(--spacing-xs);">
+              <svg class="list-check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#16687A"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Aportando su conocimiento y perspectiva del sector.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 5: FORMULARIO -->
+    <!-- SECCIÓN 5: BENEFICIOS -->
+    <section class="section-benefits" id="beneficios" aria-labelledby="benefits-title" style="background-color: var(--color-bg-secondary); border-bottom: 1px solid var(--color-border);">
+      <div class="container requirements-wrapper">
+        <h2 id="benefits-title" class="section-title">¿Por qué colaborar?</h2>
+        
+        <ul class="requirements-list" role="list">
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#D46A43"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Contribuir a mejorar los apoyos laborales.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#D46A43"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Participar en una investigación aplicada.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#D46A43"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Compartir conocimiento profesional.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#D46A43"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Acceder a aprendizajes y resultados del piloto.</span>
+          </li>
+          <li>
+            <svg class="list-check-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#D46A43"/><path d="M8.5 12.5l2.5 2.5 5-5" stroke="#FBFBF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Ayudar a diseñar futuras soluciones de apoyo al empleo.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: SOBRE NOSOTROS -->
+    <section class="section-about" id="sobre-nosotros" aria-labelledby="about-title" style="background-color: var(--color-bg-primary); border-bottom: 1px solid var(--color-border); text-align: center;">
+      <div class="container" style="max-width: 800px;">
+        <h2 id="about-title" class="section-title">Sobre nosotros</h2>
+        <p class="about-text" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-text-primary); font-family: var(--font-subtitle); margin-bottom: 0;">
+          Digit-able es una iniciativa centrada en mejorar la inclusión laboral y la permanencia en el empleo de las personas con discapacidad mediante soluciones prácticas basadas en la experiencia de profesionales y trabajadores.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: FORMULARIO -->
     <section class="section-form" id="formulario-inscripcion" aria-labelledby="form-title">
       <div class="container form-max-width">
         
@@ -339,8 +410,18 @@
         <div class="form-card">
           <h2 id="form-title" class="form-card-title text-center">Déjanos tus datos</h2>
           <p class="form-card-subtitle text-center">
-            El programa piloto empieza el <strong>15 de junio</strong>. Rellena este formulario hoy mismo para asegurar tu plaza.
+            Buscamos profesionales de apoyo para colaborar en esta fase de investigación mediante entrevistas de experiencia práctica.
           </p>
+
+          <!-- Disclaimer sobre datos personales e información sensible -->
+          <div class="privacy-disclaimer-box" style="background-color: var(--color-accent-light); border: 2px solid var(--color-accent); border-radius: var(--border-radius-md); padding: var(--spacing-sm); margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; color: var(--color-accent); margin-top: 2px;" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+            </svg>
+            <p style="font-size: 0.95rem; line-height: 1.45; color: var(--color-text-primary); margin-bottom: 0; font-family: var(--font-body); font-weight: 500; text-align: left;">
+              <strong>Aviso de confidencialidad:</strong> En esta investigación <strong>nunca le solicitaremos datos personales</strong> (ni suyos, ni de las personas usuarias con discapacidad a las que acompaña) <strong>ni información sensible</strong>. El estudio se centra exclusivamente en conocer la experiencia práctica de los técnicos de apoyo mediante entrevistas profesionales. No realizamos derivaciones de participantes.
+            </p>
+          </div>
 
           <!-- Mensaje de error general (oculto por defecto) -->
           <div id="form-error-summary" class="error-summary-box" role="alert" aria-live="assertive" style="display: none;">
@@ -352,110 +433,86 @@
           </div>
 
           <form id="pilot-signup-form" novalidate>
-            <!-- Nombre -->
+            <!-- Nombre y Apellidos -->
             <div class="form-group">
-              <label for="nombre">Nombre <span class="required-indicator" aria-hidden="true">*</span></label>
-              <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="given-name">
-              <span class="field-error" id="error-nombre" role="alert"></span>
+              <label for="nombre_apellidos">Nombre y apellidos <span class="required-indicator" aria-hidden="true">*</span></label>
+              <input type="text" id="nombre_apellidos" name="nombre_apellidos" required aria-required="true" autocomplete="name">
+              <span class="field-error" id="error-nombre_apellidos" role="alert"></span>
             </div>
 
-            <!-- Apellidos -->
-            <div class="form-group">
-              <label for="apellidos">Apellidos <span class="required-indicator" aria-hidden="true">*</span></label>
-              <input type="text" id="apellidos" name="apellidos" required aria-required="true" autocomplete="family-name">
-              <span class="field-error" id="error-apellidos" role="alert"></span>
-            </div>
-
-            <!-- Correo Electrónico -->
-            <div class="form-group">
-              <label for="email">Correo electrónico <span class="required-indicator" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
-              <span class="field-error" id="error-email" role="alert"></span>
-            </div>
-
-            <!-- Teléfono -->
-            <div class="form-group">
-              <label for="telefono">Teléfono móvil <span class="required-indicator" aria-hidden="true">*</span></label>
-              <input type="tel" id="telefono" name="telefono" required aria-required="true" autocomplete="tel">
-              <span class="field-error" id="error-telefono" role="alert"></span>
-            </div>
-
-            <!-- Edad y Provincia en paralelo en pantallas grandes -->
+            <!-- Entidad y Cargo -->
             <div class="form-row-2">
-              <!-- Edad -->
               <div class="form-group">
-                <label for="edad">Edad <span class="required-indicator" aria-hidden="true">*</span></label>
-                <input type="number" id="edad" name="edad" min="18" max="120" required aria-required="true">
-                <span class="field-error" id="error-edad" role="alert"></span>
+                <label for="entidad">Entidad u organización <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="text" id="entidad" name="entidad" required aria-required="true">
+                <span class="field-error" id="error-entidad" role="alert"></span>
               </div>
-
-              <!-- Provincia -->
               <div class="form-group">
-                <label for="provincia">Provincia de residencia <span class="required-indicator" aria-hidden="true">*</span></label>
+                <label for="cargo">Cargo o función <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="text" id="cargo" name="cargo" required aria-required="true">
+                <span class="field-error" id="error-cargo" role="alert"></span>
+              </div>
+            </div>
+
+            <!-- Correo Electrónico y Teléfono -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="email">Correo electrónico <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                <span class="field-error" id="error-email" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required aria-required="true" autocomplete="tel">
+                <span class="field-error" id="error-telefono" role="alert"></span>
+              </div>
+            </div>
+
+            <!-- Provincia y Número aproximado de personas a las que acompaña -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="provincia">Provincia <span class="required-indicator" aria-hidden="true">*</span></label>
                 <input type="text" id="provincia" name="provincia" required aria-required="true" autocomplete="address-level2">
                 <span class="field-error" id="error-provincia" role="alert"></span>
               </div>
+              <div class="form-group">
+                <label for="acompanadas">Número aproximado de personas a las que acompaña <span class="required-indicator" aria-hidden="true">*</span></label>
+                <input type="number" id="acompanadas" name="acompanadas" min="0" required aria-required="true">
+                <span class="field-error" id="error-acompanadas" role="alert"></span>
+              </div>
             </div>
 
-            <!-- ¿Trabajas actualmente? (Radio buttons grandes) -->
+            <!-- ¿Le interesaría participar en una entrevista sobre su experiencia? -->
             <fieldset class="form-group form-fieldset">
-              <legend>¿Trabajas actualmente? <span class="required-indicator" aria-hidden="true">*</span></legend>
+              <legend>¿Le interesaría participar en una entrevista profesional corta sobre su experiencia? <span class="required-indicator" aria-hidden="true">*</span></legend>
               <div class="radio-options">
                 <label class="radio-label">
-                  <input type="radio" name="trabaja" value="si" required>
+                  <input type="radio" name="entrevista" value="si" required>
                   <span class="custom-radio"></span>
-                  <span>Sí, tengo un trabajo</span>
+                  <span>Sí</span>
                 </label>
                 <label class="radio-label">
-                  <input type="radio" name="trabaja" value="no">
+                  <input type="radio" name="entrevista" value="mas-info">
                   <span class="custom-radio"></span>
-                  <span>No trabajo en este momento</span>
+                  <span>Quiero más información</span>
                 </label>
               </div>
-              <span class="field-error" id="error-trabaja" role="alert"></span>
+              <span class="field-error" id="error-entrevista" role="alert"></span>
             </fieldset>
 
-            <!-- ¿Tienes TEA o Discapacidad Intelectual? -->
-            <fieldset class="form-group form-fieldset">
-              <legend>¿Tienes TEA, discapacidad intelectual o ambas? <span class="required-indicator" aria-hidden="true">*</span></legend>
-              <div class="radio-options-vertical">
-                <label class="radio-label">
-                  <input type="radio" name="diagnostico" value="tea" required>
-                  <span class="custom-radio"></span>
-                  <span>Tengo TEA (Autismo)</span>
-                </label>
-                <label class="radio-label">
-                  <input type="radio" name="diagnostico" value="di">
-                  <span class="custom-radio"></span>
-                  <span>Tengo discapacidad intelectual</span>
-                </label>
-                <label class="radio-label">
-                  <input type="radio" name="diagnostico" value="ambas">
-                  <span class="custom-radio"></span>
-                  <span>Tengo ambas</span>
-                </label>
-                <label class="radio-label">
-                  <input type="radio" name="diagnostico" value="no-decir">
-                  <span class="custom-radio"></span>
-                  <span>Prefiero no decirlo</span>
-                </label>
-              </div>
-              <span class="field-error" id="error-diagnostico" role="alert"></span>
-            </fieldset>
-
-            <!-- Pregunta abierta -->
+            <!-- Comentarios -->
             <div class="form-group">
-              <label for="dificultades">¿Qué te gustaría mejorar o qué dificultades encuentras en tu trabajo? (Opcional)</label>
-              <textarea id="dificultades" name="dificultades" rows="4" placeholder="Ejemplo: Entender las instrucciones de mi jefe o hablar con mis compañeros..."></textarea>
+              <label for="comentarios">Comentarios (Opcional)</label>
+              <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ejemplo: Disponibilidad horaria, dudas sobre la entrevista o temas a tratar..."></textarea>
             </div>
 
-            <!-- Privacidad y condiciones (Checkbox obligatorio) -->
+            <!-- Checkbox de consentimiento -->
             <div class="form-group checkbox-group">
               <label class="checkbox-label" for="privacidad-ok">
                 <input type="checkbox" id="privacidad-ok" name="privacidad" required aria-required="true">
                 <span class="custom-checkbox"></span>
                 <span class="checkbox-text">
-                  He leído la información y acepto que me contacten para informarme sobre el programa piloto. <span class="required-indicator" aria-hidden="true">*</span>
+                  Me interesa recibir información sobre el programa piloto. <span class="required-indicator" aria-hidden="true">*</span>
                 </span>
               </label>
               <span class="field-error" id="error-privacidad" role="alert"></span>
@@ -463,7 +520,7 @@
 
             <!-- Botón de Envío -->
             <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
-              <span class="btn-text">Quiero recibir información</span>
+              <span class="btn-text">Solicitar información</span>
               <span class="btn-spinner" style="display: none;" aria-hidden="true"></span>
             </button>
           </form>
@@ -476,9 +533,9 @@
                 <path d="M8.5 12.5l2.5 2.5 5-5" stroke="#2ECC71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3 id="success-title">¡Muchas gracias por tu interés!</h3>
+            <h3 id="success-title">¡Muchas gracias por tu colaboración!</h3>
             <p id="success-desc">
-              Hemos recibido tus datos correctamente. En los próximos días nos pondremos en contacto contigo por teléfono o por WhatsApp para explicarte los siguientes pasos de la prueba piloto.
+              Hemos recibido tus datos correctamente. En los próximos días nos pondremos en contacto contigo por teléfono o por correo electrónico para agendar una breve entrevista y coordinar los detalles de la colaboración.
             </p>
             <button type="button" class="btn btn-secondary" id="btn-success-reset">Volver a ver la página</button>
           </div>
@@ -488,14 +545,14 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 6: MENSAJE FINAL -->
+    <!-- SECCIÓN 8: CTA FINAL -->
     <section class="section-final" id="final-message" aria-labelledby="final-title">
       <div class="container text-center">
-        <h2 id="final-title" class="final-title">Queremos construir mejores apoyos para el empleo.</h2>
+        <h2 id="final-title" class="final-title">Ayúdanos a comprender mejor las necesidades de apoyo que aparecen en el trabajo.</h2>
         <p class="final-text">
-          Tu experiencia puede ayudarnos a entender mejor las dificultades que aparecen en el trabajo y a crear apoyos más útiles para otras personas.
+          Tu experiencia profesional puede contribuir al desarrollo de mejores recursos de apoyo para las personas con discapacidad.
         </p>
-        <a href="#formulario-inscripcion" class="btn btn-primary" id="final-cta">Participar en el piloto</a>
+        <a href="#formulario-inscripcion" class="btn btn-primary" id="final-cta">Colaborar en el piloto</a>
       </div>
     </section>
 
@@ -527,11 +584,11 @@
       </header>
       <div class="modal-body">
         <p><strong>¿Quién cuida tus datos?</strong></p>
-        <p>Los datos que nos envíes en el formulario se guardan de forma segura para gestionar tu participación en este programa piloto de apoyo al empleo.</p>
+        <p>Los datos que nos envíes en el formulario se guardan de forma segura para gestionar la colaboración con tu entidad en este programa piloto de apoyo al empleo.</p>
         <p><strong>¿Para qué usaremos tus datos?</strong></p>
         <ul>
-          <li>Para ponernos en contacto contigo por teléfono o WhatsApp si cumples los requisitos.</li>
-          <li>Para explicarte cómo funciona la prueba piloto de 30 días.</li>
+          <li>Para ponernos en contacto contigo por teléfono, correo electrónico o WhatsApp.</li>
+          <li>Para explicarte cómo funciona el programa piloto y coordinar la derivación de participantes.</li>
         </ul>
         <p><strong>¿Compartiremos tus datos?</strong></p>
         <p>No. No venderemos ni daremos tus datos personales a ninguna otra empresa u organización. Tus datos se guardarán de forma estrictamente privada y confidencial.</p>
@@ -556,9 +613,9 @@
       <div class="modal-body">
         <p>Este sitio web es parte de una iniciativa de investigación independiente y sin ánimo de lucro dedicada a mejorar el empleo y los apoyos a la diversidad en el trabajo.</p>
         <p><strong>Propósito de la web</strong></p>
-        <p>El único objetivo de esta página es informar sobre la prueba piloto de un servicio gratuito de orientación laboral a través de WhatsApp y recoger solicitudes de participación.</p>
-        <p><strong>Condiciones de la prueba piloto</strong></p>
-        <p>La participación es totalmente gratuita y voluntaria. Los participantes pueden abandonar el piloto en cualquier momento que lo deseen simplemente informando al equipo de apoyo.</p>
+        <p>El único objetivo de esta página es informar sobre la prueba piloto de un servicio gratuito de orientación laboral a través de WhatsApp y recoger solicitudes de colaboración.</p>
+        <p><strong>Condiciones del programa piloto</strong></p>
+        <p>La colaboración es totalmente gratuita y voluntaria. Las entidades pueden dejar de colaborar en cualquier momento simplemente informando al equipo de apoyo.</p>
       </div>
       <footer class="modal-footer">
         <button type="button" class="btn btn-secondary modal-close-action">Cerrar</button>
@@ -644,16 +701,84 @@
         </div>
 
         <!-- Caja de Conexión Google Sheets -->
-        <div class="admin-google-sheet-box">
+        <div class="admin-google-sheet-box" style="background-color: var(--color-bg-secondary); border: 2px solid var(--color-border); border-radius: var(--border-radius-sm); padding: var(--spacing-md); margin-top: var(--spacing-md); margin-bottom: var(--spacing-md);">
           <h3 style="font-size: 1.2rem; color: var(--color-brand-primary); margin-bottom: var(--spacing-xs);">Conexión automática con Google Sheets</h3>
           <p class="admin-info-text" style="font-size: 0.95rem; margin-bottom: var(--spacing-sm);">
-            Si quieres guardar las inscripciones automáticamente en una hoja de Google Sheets en tu cuenta de Google, introduce aquí la URL de tu Google Apps Script (los detalles del código y configuración están detallados en la documentación):
+            Si quieres guardar las inscripciones automáticamente en una hoja de Google Sheets en tu cuenta de Google, introduce aquí la URL de tu Google Apps Script (Aplicación Web):
           </p>
-          <div class="url-input-group" style="display: flex; gap: var(--spacing-sm); align-items: center; flex-wrap: wrap;">
+          <div class="url-input-group" style="display: flex; gap: var(--spacing-sm); align-items: center; flex-wrap: wrap; margin-bottom: var(--spacing-sm);">
             <input type="text" id="input-webapp-url" placeholder="https://script.google.com/macros/s/.../exec" style="flex: 1; min-height: 44px; padding: 8px 12px; border: 2px solid var(--color-border); border-radius: var(--border-radius-sm); font-size: 0.95rem;">
             <button type="button" id="btn-save-webapp-url" class="btn btn-primary" style="padding: 8px 16px; min-height: 44px; font-size: 0.95rem;">Guardar Enlace</button>
           </div>
           <span id="webapp-url-status" style="display: block; font-size: 0.9rem; margin-top: 5px; font-weight: bold; color: var(--color-success);"></span>
+
+          <details style="margin-top: var(--spacing-sm); border-top: 1px solid var(--color-border); padding-top: var(--spacing-xs);">
+            <summary style="font-weight: bold; cursor: pointer; color: var(--color-brand-primary); font-size: 0.95rem; display: flex; align-items: center; gap: 5px;">
+              <span>Instrucciones y Código para Google Apps Script</span>
+            </summary>
+            <div style="margin-top: var(--spacing-xs); font-size: 0.9rem; line-height: 1.4; color: var(--color-text-primary); text-align: left;">
+              <ol style="margin-left: 20px; margin-bottom: 10px;">
+                <li>Crea una nueva hoja de cálculo en Google Sheets en tu cuenta.</li>
+                <li>Ve al menú superior: <strong>Extensiones &gt; Apps Script</strong>.</li>
+                <li>Sustituye todo el código del editor por el código de abajo.</li>
+                <li>Haz clic en <strong>Implementar &gt; Nueva implementación</strong> (botón azul arriba).</li>
+                <li>Haz clic en el icono de engranaje y selecciona <strong>Aplicación web</strong>.</li>
+                <li>Configura: Ejecutar como <strong>"Tú (tu email)"</strong> y Quién tiene acceso <strong>"Cualquier persona"</strong>.</li>
+                <li>Haz clic en Implementar, concede los permisos de tu cuenta de Google y copia la <strong>URL de la Aplicación web</strong> (que termina en <code>/exec</code>).</li>
+                <li>Pega esa URL en el campo de arriba y haz clic en <strong>Guardar Enlace</strong>.</li>
+              </ol>
+              <pre style="background-color: var(--color-bg-primary); padding: var(--spacing-sm); border-radius: var(--border-radius-sm); overflow-x: auto; font-family: monospace; font-size: 0.85rem; border: 1px solid var(--color-border); white-space: pre; margin-top: var(--spacing-xs);">
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    
+    // Si la hoja está vacía, añade la fila de encabezados
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        "ID", 
+        "Fecha de Registro", 
+        "Nombre y Apellidos", 
+        "Entidad u Organización",
+        "Cargo o Función", 
+        "Correo Electrónico", 
+        "Teléfono", 
+        "Provincia",
+        "Personas Acompañadas", 
+        "¿Participar en entrevista?", 
+        "Comentarios",
+        "Acepta Privacidad", 
+        "Estado de Contacto", 
+        "Notas de Seguimiento"
+      ]);
+    }
+    
+    // Añade el nuevo registro de colaborador
+    sheet.appendRow([
+      data.id,
+      data.fecha,
+      data.nombre_apellidos,
+      data.entidad,
+      data.cargo,
+      data.email,
+      data.telefono,
+      data.provincia,
+      data.acompanadas,
+      data.entrevista,
+      data.comentarios,
+      "Sí",
+      "Pendiente",
+      ""
+    ]);
+    
+    return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+  } catch (error) {
+    return ContentService.createTextOutput("Error: " + error.toString()).setMimeType(ContentService.MimeType.TEXT);
+  }
+}
+              </pre>
+            </div>
+          </details>
         </div>
         
         <div class="table-scroll-wrapper">
@@ -662,15 +787,15 @@
               <tr>
                 <th>ID</th>
                 <th>Fecha de Registro</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
+                <th>Nombre y Apellidos</th>
+                <th>Entidad u Organización</th>
+                <th>Cargo o Función</th>
                 <th>Correo Electrónico</th>
                 <th>Teléfono</th>
-                <th>Edad</th>
                 <th>Provincia</th>
-                <th>¿Trabaja actualmente?</th>
-                <th>Diagnóstico</th>
-                <th>Dificultades en el trabajo</th>
+                <th>Personas Acompañadas</th>
+                <th>¿Participar en entrevista?</th>
+                <th>Comentarios</th>
               </tr>
             </thead>
             <tbody id="admin-table-body">
