@@ -1,31 +1,32 @@
 /* DESIGN SYSTEM & CONSTANTS */
 :root {
   /* Color Palette (Calm, Professional, High Contrast) */
-  --color-bg-primary: #FBFBF9;    /* Soft warm white (cream) */
-  --color-bg-secondary: #FFFFFF;  /* Pure white for cards */
-  --color-text-primary: #1B2A32;  /* Slate blue-black (High Contrast, contrast ratio > 7:1) */
-  --color-text-muted: #4B5E6B;    /* Medium slate for secondary details */
+  --color-bg-primary: #FAF8F5;    /* Base marfil cálido (Fondo principal) */
+  --color-bg-secondary: #F2ECE4;  /* Beige arena claro (Fondo secundario / bloques suaves) */
+  --color-bg-card: #FFFFFF;       /* Blanco puro para tarjetas principales */
+  --color-text-primary: #000000;  /* Negro puro (Texto principal, máxima legibilidad) */
+  --color-text-muted: #8E8A84;    /* Gris topo (Texto secundario y elementos neutros) */
   
-  --color-brand-primary: #16687A; /* Calm Teal (Primary brand color, contrast ratio > 4.5:1) */
-  --color-brand-hover: #0E4F5E;   /* Darker Teal for hover states */
-  --color-brand-light: #EBF2F4;   /* Very light teal for card backgrounds */
+  --color-brand-primary: #0097B2; /* Azul principal (Color líder de marca) */
+  --color-brand-hover: #007D94;   /* Azul principal más oscuro para hovers */
+  --color-brand-light: #E5F6F8;   /* Azul principal muy claro para fondos de acento */
   
-  --color-accent: #D46A43;        /* Terracotta for limited tags / primary feedback / focus outline */
-  --color-accent-hover: #B24F2C;  /* Darker terracotta */
-  --color-accent-light: #FBECE6;  /* Soft light terracotta bg */
+  --color-accent: #E07A5F;        /* Coral secundario (Cercanía, humanidad y acento estratégico) */
+  --color-accent-hover: #C66249;  /* Coral más oscuro para hovers */
+  --color-accent-light: #FBECE8;  /* Coral muy claro para fondos de acento */
   
-  --color-success: #2E7D32;       /* Accessible dark green for success and WhatsApp */
-  --color-success-light: #EBF7ED; /* Light green bg */
-  --color-error: #C0392B;         /* Accessible dark red for errors */
-  --color-error-bg: #FDEDEC;      /* Light red bg */
+  --color-success: #2A7031;       /* Verde accesible para WhatsApp / éxito */
+  --color-success-light: #E8F5E9; /* Verde claro */
+  --color-error: #C0392B;         /* Rojo accesible para errores */
+  --color-error-bg: #FDEDEC;      /* Rojo claro */
   
-  --color-border: #D1DBDF;        /* Soft gray-blue border */
-  --color-border-focus: #16687A;
+  --color-border: #D8D1C7;        /* Borde suave en tono beige/topo */
+  --color-border-focus: #0097B2;  /* Azul principal en foco */
   
-  /* Typography */
-  --font-title: 'Hanken Grotesk', 'HK Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-subtitle: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Helvetica Neue', 'HelveticaNowLight', Helvetica, Arial, sans-serif;
+  /* Typography - Official Digit-able Stack */
+  --font-title: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-subtitle: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-size-base: 1.125rem;     /* 18px base for readability */
   --line-height-base: 1.6;
   
@@ -40,9 +41,9 @@
   --border-radius-sm: 6px;
   --border-radius-md: 12px;
   --border-radius-lg: 24px;
-  --box-shadow-sm: 0 2px 4px rgba(27, 42, 50, 0.05);
-  --box-shadow-md: 0 8px 16px rgba(27, 42, 50, 0.08);
-  --box-shadow-lg: 0 16px 32px rgba(27, 42, 50, 0.12);
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 8px 16px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.08);
   
   /* Transition */
   --transition-speed: 0.25s;
@@ -74,7 +75,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400; /* Inter Regular */
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--color-text-primary);
@@ -85,7 +86,7 @@ body {
 
 p, li {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400; /* Inter Regular */
   letter-spacing: 0.01em;
   margin-bottom: var(--spacing-sm);
 }
@@ -97,10 +98,10 @@ strong {
 h1, h2, h3, h4 {
   color: var(--color-text-primary);
   font-family: var(--font-title);
-  font-weight: 900;
+  font-weight: 600; /* Inter SemiBold */
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.057em; /* Official -57 tracking */
+  letter-spacing: -0.02em; /* Adjusted letter-spacing for Inter SemiBold */
 }
 
 /* ACCESSIBILITY OUTLINE & FOCUS INDICATOR */
