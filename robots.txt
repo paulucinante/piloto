@@ -1,0 +1,9 @@
+# robots.txt para participa.digit-able.es
+# Permitir a todos los rastreadores indexar todo el contenido
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://participa.digit-able.es/sitemap.xml
