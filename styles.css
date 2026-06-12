@@ -1137,6 +1137,7 @@ textarea.input-invalid {
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
   text-align: center;
+  justify-items: center;
 }
 
 .contact-item {
@@ -1149,6 +1150,8 @@ textarea.input-invalid {
   align-items: center;
   gap: var(--spacing-xs);
   transition: all var(--transition-speed) ease;
+  max-width: 320px;
+  width: 100%;
 }
 
 .contact-item:hover {
@@ -1241,9 +1244,7 @@ textarea.input-invalid {
     justify-content: space-between;
   }
   
-  .contact-methods {
-    grid-template-columns: 1fr 1fr;
-  }
+
 }
 
 /* Desktop */
