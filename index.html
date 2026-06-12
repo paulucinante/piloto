@@ -754,9 +754,9 @@
                 <li>Pega esa URL en el campo de arriba y haz clic en <strong>Guardar Enlace</strong>.</li>
               </ol>
               <pre style="background-color: var(--color-bg-primary); padding: var(--spacing-sm); border-radius: var(--border-radius-sm); overflow-x: auto; font-family: monospace; font-size: 0.85rem; border: 1px solid var(--color-border); white-space: pre; margin-top: var(--spacing-xs);">
-function doPost(e) {
+function doGet(e) {
   try {
-    var data = JSON.parse(e.postData.contents);
+    var data = e.parameter;
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     
     // Si la hoja está vacía, añade la fila de encabezados
@@ -778,27 +778,36 @@ function doPost(e) {
       ]);
     }
     
-    // Añade el nuevo registro de colaborador
-    sheet.appendRow([
-      data.id,
-      data.fecha,
-      data.nombre_apellidos,
-      data.entidad,
-      data.cargo,
-      data.email,
-      data.telefono,
-      data.provincia,
-      data.entrevista,
-      data.comentarios,
-      "Sí",
-      "Pendiente",
-      ""
-    ]);
+    // Añade el nuevo registro (solo si viene con datos)
+    if (data.nombre_apellidos) {
+      sheet.appendRow([
+        data.id || "",
+        data.fecha || "",
+        data.nombre_apellidos || "",
+        data.entidad || "",
+        data.cargo || "",
+        data.email || "",
+        data.telefono || "",
+        data.provincia || "",
+        data.entrevista || "",
+        data.comentarios || "",
+        "Sí",
+        "Pendiente",
+        ""
+      ]);
+    }
     
-    return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+    return ContentService.createTextOutput("OK")
+      .setMimeType(ContentService.MimeType.TEXT);
   } catch (error) {
-    return ContentService.createTextOutput("Error: " + error.toString()).setMimeType(ContentService.MimeType.TEXT);
+    return ContentService.createTextOutput("Error: " + error)
+      .setMimeType(ContentService.MimeType.TEXT);
   }
+}
+
+// Fallback: si llega como POST, redirige a doGet
+function doPost(e) {
+  return doGet(e);
 }
               </pre>
             </div>

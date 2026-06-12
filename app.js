@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
       enviarDatosFormulario(nuevoReg);
     });
 
-    // Envía los datos
+    // Envía los datos a Google Sheets
     function enviarDatosFormulario(nuevoReg) {
       if (!submitButton) return;
       submitButton.disabled = true;
@@ -487,27 +487,66 @@ document.addEventListener('DOMContentLoaded', () => {
       const sheetUrl = localStorage.getItem('google_sheet_webapp_url');
       
       if (sheetUrl) {
-        // Enviar a Google Sheets usando fetch (modo no-cors con tipo de contenido simple 'text/plain' para evitar que el navegador bloquee la petición por preflight OPTIONS de CORS)
-        fetch(sheetUrl, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain'
-          },
-          body: JSON.stringify(nuevoReg)
+        // Construir los datos como query params para enviar por GET.
+        // Google Apps Script responde con redirect 302. Con GET, los query params
+        // se conservan a través del redirect y doGet(e) los lee en e.parameter.
+        const campos = {
+          id: nuevoReg.id,
+          fecha: nuevoReg.fecha,
+          nombre_apellidos: nuevoReg.nombre_apellidos,
+          entidad: nuevoReg.entidad,
+          cargo: nuevoReg.cargo,
+          email: nuevoReg.email,
+          telefono: nuevoReg.telefono,
+          provincia: nuevoReg.provincia,
+          entrevista: nuevoReg.entrevista,
+          comentarios: nuevoReg.comentarios
+        };
+        
+        const queryString = new URLSearchParams(campos).toString();
+        const fullUrl = sheetUrl + '?' + queryString;
+        
+        console.log('[Google Sheets] Enviando datos...');
+        console.log('[Google Sheets] URL:', fullUrl);
+        
+        // Intento 1: fetch con modo cors (Google Apps Script envía headers CORS
+        // cuando se despliega con acceso "Cualquier persona")
+        fetch(fullUrl, {
+          method: 'GET',
+          redirect: 'follow'
         })
-        .then(() => {
-          console.log('Enviado con éxito a Google Sheets');
+        .then(response => {
+          console.log('[Google Sheets] Respuesta recibida. Status:', response.status);
+          return response.text();
+        })
+        .then(text => {
+          console.log('[Google Sheets] ✅ Éxito. Respuesta del servidor:', text);
           mostrarExitoFormulario();
         })
-        .catch((err) => {
-          console.error('Error al enviar a Google Sheets:', err);
-          // Mostramos éxito igualmente para que la persona con TEA / discapacidad cognitiva no se frustre por fallos de red.
-          // Los datos quedan respaldados de todos modos en el localStorage local y se pueden exportar a mano en el panel de control.
-          mostrarExitoFormulario();
+        .catch(err => {
+          console.warn('[Google Sheets] Error en modo cors:', err.message);
+          console.log('[Google Sheets] Reintentando con modo no-cors...');
+          
+          // Intento 2: si CORS falla, intentar con no-cors
+          // La petición se envía igualmente, aunque no podamos leer la respuesta
+          fetch(fullUrl, {
+            method: 'GET',
+            mode: 'no-cors',
+            redirect: 'follow'
+          })
+          .then(() => {
+            console.log('[Google Sheets] ✅ Petición enviada (modo no-cors, respuesta opaca)');
+            mostrarExitoFormulario();
+          })
+          .catch(err2 => {
+            console.error('[Google Sheets] ❌ Error también en no-cors:', err2.message);
+            // Mostramos éxito igualmente - datos guardados en localStorage
+            mostrarExitoFormulario();
+          });
         });
+        
       } else {
-        // Simulación local normal (1.5s delay)
+        // Sin URL configurada: simulación local (1.5s delay)
         setTimeout(() => {
           mostrarExitoFormulario();
         }, 1500);
