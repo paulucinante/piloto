@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. BASE DE DATOS LOCAL Y MOCK RECORDS
   // ==========================================
   const mockRegistrations = [
-    { id: 1, fecha: '02/06/2026 10:15', nombre_apellidos: 'Carlos Martín Gómez', entidad: 'Fundación Inclusión', cargo: 'Preparador Laboral', email: 'carlos.martin@fundacioninclusion.org', telefono: '612345678', provincia: 'Madrid', acompanadas: 12, entrevista: 'Sí', comentarios: 'Interesado en una entrevista corta por la mañana.' },
-    { id: 2, fecha: '02/06/2026 11:30', nombre_apellidos: 'Sofía Ruiz Plaza', entidad: 'Asociación Aspadir', cargo: 'Técnica de Empleo', email: 'sofia.ruiz@aspadir.es', telefono: '654321098', provincia: 'Barcelona', acompanadas: 8, entrevista: 'Quiero más información', comentarios: 'Nos gustaría conocer el tipo de preguntas antes de coordinar.' },
-    { id: 3, fecha: '02/06/2026 12:45', nombre_apellidos: 'Miguel Ángel Sanz López', entidad: 'Fundación ONCE', cargo: 'Coordinador de Empleo', email: 'miguel.sanz@fundaciononce.es', telefono: '678901234', provincia: 'Valencia', acompanadas: 25, entrevista: 'Sí', comentarios: 'Podemos colaborar facilitando opiniones de varios preparadores.' },
-    { id: 4, fecha: '02/06/2026 14:10', nombre_apellidos: 'Lucía Fernández Ocaña', entidad: 'Asociación Autismo Sevilla', cargo: 'Preparadora Laboral', email: 'lucia.fernandez@autismosevilla.org', telefono: '690123456', provincia: 'Sevilla', acompanadas: 10, entrevista: 'Sí', comentarios: 'Disponible para entrevista online en cualquier momento.' }
+    { id: 1, fecha: '02/06/2026 10:15', nombre_apellidos: 'Carlos Martín Gómez', entidad: 'Fundación Inclusión', cargo: 'Preparador Laboral', email: 'carlos.martin@fundacioninclusion.org', telefono: '612345678', provincia: 'Madrid', entrevista: 'Sí', comentarios: 'Interesado en una entrevista corta por la mañana.' },
+    { id: 2, fecha: '02/06/2026 11:30', nombre_apellidos: 'Sofía Ruiz Plaza', entidad: 'Asociación Aspadir', cargo: 'Técnica de Empleo', email: 'sofia.ruiz@aspadir.es', telefono: '654321098', provincia: 'Barcelona', entrevista: 'Quiero más información', comentarios: 'Nos gustaría conocer el tipo de preguntas antes de coordinar.' },
+    { id: 3, fecha: '02/06/2026 12:45', nombre_apellidos: 'Miguel Ángel Sanz López', entidad: 'Fundación ONCE', cargo: 'Coordinador de Empleo', email: 'miguel.sanz@fundaciononce.es', telefono: '678901234', provincia: 'Valencia', entrevista: 'Sí', comentarios: 'Podemos colaborar facilitando opiniones de varios preparadores.' },
+    { id: 4, fecha: '02/06/2026 14:10', nombre_apellidos: 'Lucía Fernández Ocaña', entidad: 'Asociación Autismo Sevilla', cargo: 'Preparadora Laboral', email: 'lucia.fernandez@autismosevilla.org', telefono: '690123456', provincia: 'Sevilla', entrevista: 'Sí', comentarios: 'Disponible para entrevista online en cualquier momento.' }
   ];
 
   // Obtiene los registros guardados o inicializa con los mock
@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <td title="${reg.email}" style="color: var(--color-brand-primary);">${reg.email}</td>
         <td>${reg.telefono}</td>
         <td>${reg.provincia}</td>
-        <td>${reg.acompanadas}</td>
         <td>${reg.entrevista}</td>
         <td title="${reg.comentarios || ''}">${reg.comentarios || ''}</td>
       `;
@@ -226,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const lista = obtenerRegistros();
       
       // Encabezados con punto y coma para compatibilidad automática con Excel
-      let csvContent = 'ID;Fecha de Registro;Nombre y Apellidos;Entidad u Organización;Cargo o Función;Correo Electrónico;Teléfono;Provincia;Personas Acompañadas;¿Participar en entrevista?;Comentarios;Acepta Privacidad;Estado de Contacto;Notas de Seguimiento\r\n';
+      let csvContent = 'ID;Fecha de Registro;Nombre y Apellidos;Entidad u Organización;Cargo o Función;Correo Electrónico;Teléfono;Provincia;¿Participar en entrevista?;Comentarios;Acepta Privacidad;Estado de Contacto;Notas de Seguimiento\r\n';
       
       lista.forEach(reg => {
         const comentariosLimpios = (reg.comentarios || '')
@@ -242,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
           reg.email.replace(/;/g, ','),
           reg.telefono.replace(/;/g, ','),
           reg.provincia.replace(/;/g, ','),
-          reg.acompanadas,
           reg.entrevista,
           comentariosLimpios,
           'Sí',
@@ -427,20 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearError(provincia);
       }
 
-      // 7. Validar Acompañadas
-      const acompanadas = document.getElementById('acompanadas');
-      if (!acompanadas.value.trim()) {
-        showError(acompanadas, 'Escribe el número aproximado de personas a las que acompañas.');
-        hasErrors = true;
-      } else {
-        const acompNum = parseInt(acompanadas.value, 10);
-        if (isNaN(acompNum) || acompNum < 0) {
-          showError(acompanadas, 'Introduce un número válido mayor o igual a 0.');
-          hasErrors = true;
-        } else {
-          clearError(acompanadas);
-        }
-      }
+
 
       // 8. Validar ¿Participar en entrevista?
       const entrevistaRadios = form.querySelectorAll('input[name="entrevista"]');
@@ -482,7 +467,6 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email.value.trim(),
         telefono: telefono.value.trim(),
         provincia: provincia.value.trim(),
-        acompanadas: parseInt(acompanadas.value, 10),
         entrevista: obtenerEntrevistaTexto(form.querySelector('input[name="entrevista"]:checked').value),
         comentarios: document.getElementById('comentarios').value.trim() || 'Ninguno indicado.'
       };
@@ -540,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
         successState.scrollIntoView({ behavior: 'smooth' });
       }
       submitButton.disabled = false;
-      if (btnText) btnText.textContent = 'Solicitar información';
+      if (btnText) btnText.textContent = 'Solicitar entrevista';
       if (btnSpinner) btnSpinner.style.display = 'none';
     }
   }
